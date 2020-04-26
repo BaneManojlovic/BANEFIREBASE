@@ -55,6 +55,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="IF8-mT-4a0"/>
+                    <connections>
+                        <outlet property="loginButton" destination="Uhy-zD-YDS" id="HnK-iu-qDD"/>
+                        <outlet property="signUpButton" destination="eev-yI-r1Z" id="2jz-my-06B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,6 +93,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="loginTapped:" destination="MHN-tt-Tlq" eventType="touchUpInside" id="9NM-V3-fS9"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptc-1D-SFP">
                                         <rect key="frame" x="0.0" y="180" width="382" height="20.5"/>
@@ -112,6 +119,12 @@
                         <viewLayoutGuide key="safeArea" id="cI9-SP-CR0"/>
                     </view>
                     <navigationItem key="navigationItem" id="e07-iH-lce"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="0jY-Jq-d4j" id="ShM-Yt-dbq"/>
+                        <outlet property="errorLabel" destination="Ptc-1D-SFP" id="kMl-sa-Vcu"/>
+                        <outlet property="loginButton" destination="kcE-px-THd" id="X9M-Mc-vU6"/>
+                        <outlet property="passwordTextField" destination="TEe-wz-ziF" id="kCE-kf-qwL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQf-gh-HsA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,6 +169,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="Sign Up"/>
+                                        <connections>
+                                            <action selector="signUpTapped:" destination="hCp-h7-aGl" eventType="touchUpInside" id="RTB-vL-gWW"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBe-fw-I6m">
                                         <rect key="frame" x="0.0" y="300" width="382" height="20.5"/>
@@ -181,6 +197,14 @@
                         <viewLayoutGuide key="safeArea" id="wUU-aq-Co0"/>
                     </view>
                     <navigationItem key="navigationItem" id="GM1-Rz-KK8"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="TPW-Sg-OKH" id="Lan-tG-KM8"/>
+                        <outlet property="errorLabel" destination="aBe-fw-I6m" id="edM-Xj-7Wz"/>
+                        <outlet property="firstNameTextField" destination="cAX-Y3-4kf" id="H9u-GD-zD2"/>
+                        <outlet property="lastNameTexField" destination="ueP-cg-Gaf" id="tMs-hW-wpC"/>
+                        <outlet property="passwordTextField" destination="TaX-Kg-MoI" id="7uO-ch-2x4"/>
+                        <outlet property="signUpButton" destination="1LW-7g-UMp" id="v2J-pa-9VY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLp-a7-VK2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
