@@ -1,0 +1,6 @@
+framework module Pods_BANEFIREBASE_BANEFIREBASEUITests {
+  umbrella header "Pods-BANEFIREBASE-BANEFIREBASEUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
