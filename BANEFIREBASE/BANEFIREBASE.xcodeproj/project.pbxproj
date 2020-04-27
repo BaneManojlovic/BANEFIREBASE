@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A05679924569A760086E0D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05679824569A760086E0D3 /* Constants.swift */; };
 		9A5F05472455A635002418D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F05462455A635002418D6 /* AppDelegate.swift */; };
 		9A5F05492455A635002418D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F05482455A635002418D6 /* SceneDelegate.swift */; };
 		9A5F054B2455A635002418D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5F054A2455A635002418D6 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		3DB7DE9F2E9B2F09C0929620 /* Pods-BANEFIREBASETests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BANEFIREBASETests.release.xcconfig"; path = "Target Support Files/Pods-BANEFIREBASETests/Pods-BANEFIREBASETests.release.xcconfig"; sourceTree = "<group>"; };
 		78AC68FFEEFFA0372B3E60ED /* Pods-BANEFIREBASE-BANEFIREBASEUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BANEFIREBASE-BANEFIREBASEUITests.release.xcconfig"; path = "Target Support Files/Pods-BANEFIREBASE-BANEFIREBASEUITests/Pods-BANEFIREBASE-BANEFIREBASEUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8663804CEBE4B5528C871723 /* Pods_BANEFIREBASE_BANEFIREBASEUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BANEFIREBASE_BANEFIREBASEUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A05679824569A760086E0D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9A5F05432455A635002418D6 /* BANEFIREBASE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BANEFIREBASE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A5F05462455A635002418D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A5F05482455A635002418D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +111,6 @@
 				D975E574F40A9A089C4BE5FC /* Pods-BANEFIREBASETests.debug.xcconfig */,
 				3DB7DE9F2E9B2F09C0929620 /* Pods-BANEFIREBASETests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -239,6 +240,7 @@
 		9A5F057E2455A819002418D6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9A05679824569A760086E0D3 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -521,6 +523,7 @@
 				9A5F054B2455A635002418D6 /* ViewController.swift in Sources */,
 				9A5F05822455ADAF002418D6 /* SignUpViewController.swift in Sources */,
 				9A5F05472455A635002418D6 /* AppDelegate.swift in Sources */,
+				9A05679924569A760086E0D3 /* Constants.swift in Sources */,
 				9A5F05492455A635002418D6 /* SceneDelegate.swift in Sources */,
 				9A5F05842455ADEA002418D6 /* HomeViewController.swift in Sources */,
 			);

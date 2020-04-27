@@ -257,7 +257,7 @@
     </scenes>
     <resources>
         <namedColor name="base_background_color">
-            <color red="1" green="0.81761663732394363" blue="0.11187830105633803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.81800001859664917" blue="0.1120000034570694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="base_button_color">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

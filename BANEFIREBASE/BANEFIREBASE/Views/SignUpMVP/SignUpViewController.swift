@@ -36,36 +36,20 @@ class SignUpViewController: UIViewController {
     // MARK: - Action Methods
     @IBAction func signUpTapped(_ sender: Any) {
         debugPrint("Sign up Tapped!!!")
+
         /// validate fileds
         let error = validateFields()
         if error != nil {
             /// show error message
             showError(error!)
         } else {
-            /// create leande versions of the data
+            /// create cleaned versions of the data
             let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let lastName = lastNameTexField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let userEmail = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let userPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             /// create user using FirebaseAuth method ---- ovo kasnije izvuci u posebnu metodu!!!
-            Auth.auth().createUser(
-                withEmail: "",
-                password: "") { (result, err) in
-                    if let err = err {
-                        ///there was an error
-                        debugPrint("Error: \(err.localizedDescription)")
-                        self.showError("Error creating user")
-                    } else {
-                        ///user was create successfully
-                        ///we use Firestore clasess after importing Firabase
-                        let db = Firestore.firestore() //initialize instance of Cloud firestore
-                        db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid":result!.user.uid]) { (error) in
-                            if error != nil {
-                                self.showError("Error saving user data. User data couldn't be saved on database side")
-                            }
-                        }
-                    }
-            }
+            createUser(firstName: firstName, lastName: lastName, userEmail: userEmail, userPassword: userPassword)
         }
         
         /// transition to home screen
@@ -77,11 +61,36 @@ class SignUpViewController: UIViewController {
     func showError(_ message: String) {
         errorLabel.isHidden = false
         errorLabel.text = message
+        errorLabel.numberOfLines = 0
+    }
+    
+    /// for creating user in database using Firebas and Firestore methods
+    func createUser(firstName: String, lastName: String, userEmail: String, userPassword: String) {
+        Auth.auth().createUser(
+            withEmail: userEmail,
+            password: userPassword) { (result, err) in
+                if let err = err {
+                    ///there was an error
+                    debugPrint("Error: \(err.localizedDescription)")
+                    self.showError("Error creating user")
+                } else {
+                    ///user was create successfully
+                    ///we use Firestore clasess after importing Firabase
+                    let db = Firestore.firestore() //initialize instance of Cloud firestore
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid":result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("Error saving user data. User data couldn't be saved on database side")
+                        }
+                    }
+                }
+        }
     }
     
     /// for transition to home screen
     func transtionToHomeScreen() {
-        
+        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        view.window?.rootViewController = homeViewController
+        view.window?.makeKeyAndVisible()
     }
 }
 
