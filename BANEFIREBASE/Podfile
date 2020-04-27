@@ -8,6 +8,8 @@ target 'BANEFIREBASE' do
   # Pods for BANEFIREBASE
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Core'
 
   target 'BANEFIREBASETests' do
     inherit! :search_paths
