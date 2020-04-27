@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Action Methods
     @IBAction func loginTapped(_ sender: Any) {
-        debugPrint("Login tapped!")
+        debugPrint("Login tapped!!!")
         /// validate fields
         let error = validateFields()
         if error != nil {
